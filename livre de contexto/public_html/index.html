@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gramatica Livre de Contexto</title>
+        <script src="./classes/simplificacao/class.SimplificaoSubstituicaoVariaveis.js"></script>
+        <script src="./classes/simplificacao/class.SimplificacaoProducaoVazia.js"></script>
+        <script src="./classes/simplificacao/class.SimplificacaoSimbolosInuteis.js"></script>
+        <script src="./classes/arquivo.js"></script>
+        <script src="./classes/class.Fecho.js"></script>
+        <script src="./classes/simplificacao.js"></script>
+        <script src="./classes/formasNormais.js"></script>
+        <script src="./classes/formaNormal/class.Chomsky.js"></script>
+        <script src="./classes/formaNormal/class.Greibach.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+    </head>
+    <body>
+        <div class="center-site">
+            <span class="box-Text2"> Insira a Gramatica </span>
+            <textarea id="gramatica" class="box-Text" maxlength="400" rows="10" cols="30" ></textarea>
+            <br>
+            <br>
+        </div>
+        <table width="1024" border="0" align="center">
+            <tr>
+                <td align="center"><p><strong></strong> </p>
+                    <p> <strong>
+                            <span class="box-Text3"> Producao Vazia </span>
+                            <textarea id="producaoVazia" class="box-Text" maxlength="400" rows="10" cols="30" ></textarea>
+                            <br>
+                            <button  onclick="producaoVazia(lerAquivo())"class="btn-lg">Executar</button>
+                        </strong></p></td>
+                <td align="center"><p><strong></strong></p>
+                    <p>
+                        <strong>
+                            <span class="box-Text3"> Substituicao de Variavel </span>
+                            <textarea id="substituicaoDeVariaveis" class="box-Text" maxlength="400" rows="10" cols="30" ></textarea>
+                            <br>
+                            <button onclick="substituicaoDeVariavel(lerAquivo())" class="btn-lg">Executar</button>
+                        </strong></p></td>
+                <td align="center"><p><strong></strong></p>
+                    <p> <strong>
+                            <span class="box-Text3"> Simbolos Inuteis </span>
+                            <textarea id="simbolosInuteis" class="box-Text" maxlength="400" rows="10" cols="30" ></textarea>
+                            <br>
+                            <button  onclick="simbolosInuteis(lerAquivo())"class="btn-lg">Executar</button>
+                        </strong></p></td>
+                <td align="center"><p><strong></strong></p>
+                    <p>
+                        <strong>
+                            <span class="box-Text3"> Choumsky </span>
+                            <textarea id="Chowsky" class="box-Text" maxlength="400" rows="10" cols="30" ></textarea>
+                            <br>
+                            <button  onclick="chomsky()"class="btn-lg">Executar</button>
+                        </strong></p></td>
+                <td align="center"><p><strong></strong></p>
+                    <p>
+                        <strong>
+                            <span class="box-Text3"> Greybach </span>
+                            <textarea id="Graybach" class="box-Text" maxlength="400" rows="10" cols="30" ></textarea>
+                            <br>
+                            <button  onclick="greybach()"class="btn-lg">Executar</button>
+                        </strong></p></td>
+                <td align="center"><p><strong></strong></p>
+                    <p>
+                        <strong>
+                            <span class="box-Text3"> Recursao Esquerda </span>
+                            <textarea id="RecursãoEsquerda" class="box-Text" maxlength="400" rows="10" cols="30" ></textarea>
+                            <br>
+                            <button  onclick="recursaoEsquerda()"class="btn-lg">Executar</button>
+                        </strong></p></td>
+            </tr>
+        </table>
+    </body>
+</html>
